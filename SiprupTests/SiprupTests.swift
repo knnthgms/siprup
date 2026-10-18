@@ -92,3 +92,12 @@ final class ReminderPlanTests: XCTestCase {
         XCTAssertEqual(dates.count, 1)
     }
 }
+
+final class ContrastTests: XCTestCase {
+    func testPicksReadableTextColour() {
+        XCTAssertTrue(Contrast.prefersDarkText(onHex: "F1EBDD"))   // milk
+        XCTAssertTrue(Contrast.prefersDarkText(onHex: "5AB8F0"))   // water
+        XCTAssertFalse(Contrast.prefersDarkText(onHex: "6B4428"))  // coffee
+        XCTAssertFalse(Contrast.prefersDarkText(onHex: "16212B"))  // dark empty glass
+    }
+}

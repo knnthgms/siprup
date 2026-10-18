@@ -1,10 +1,11 @@
 import SwiftUI
 
-/// One visual band in the glass: all of today's drinks of one type, in the order first logged.
+/// One visual band in the glass: a single logged drink. Bands stack in the order drinks were logged.
 struct LiquidLayer: Identifiable, Equatable {
     let id: String
     let name: String
     let colorHex: String
+    let time: Date
     var volumeML: Double
     let isFizzy: Bool
     let hasFoam: Bool
@@ -15,7 +16,16 @@ struct LiquidLayer: Identifiable, Equatable {
 /// Shared geometry so the canvas and the SwiftUI labels agree on where layers sit.
 enum GlassGeometry {
     /// Fraction of screen height the liquid reaches when the goal is met.
-    static let goalFraction = 0.74
+    static let goalFraction = 0.84
+
+    /// Hex colour of whatever sits behind screen point `y` (a band, or the empty glass).
+    static func backgroundHex(atY y: Double, layers: [LiquidLayer], height: Double, goalML: Double, emptyHex: String) -> String {
+        let bands = self.bands(volumes: layers.map(\.volumeML), height: height, goalML: goalML)
+        for (i, band) in bands.enumerated() where y >= band.top && y <= band.bottom {
+            return layers[i].colorHex
+        }
+        return emptyHex
+    }
 
     static func scale(height: Double, goalML: Double, totalML: Double) -> Double {
         (height * goalFraction) / max(goalML, totalML, 1)
@@ -104,14 +114,6 @@ struct LiquidGlassView: View {
             : [Color(hex: "F4F8FB"), Color(hex: "DCE7EE")]
         ctx.fill(Path(CGRect(origin: .zero, size: size)),
                  with: .linearGradient(Gradient(colors: colors), startPoint: .zero, endPoint: CGPoint(x: 0, y: size.height)))
-
-        // Faint dashed line where the goal sits — a target marker, not a measurement scale.
-        let goalY = size.height * (1 - GlassGeometry.goalFraction)
-        var line = Path()
-        line.move(to: CGPoint(x: 0, y: goalY))
-        line.addLine(to: CGPoint(x: size.width, y: goalY))
-        ctx.stroke(line, with: .color((dark ? Color.white : Color.black).opacity(0.14)),
-                   style: StrokeStyle(lineWidth: 1, dash: [6, 6]))
     }
 
     private func drawLiquid(_ ctx: inout GraphicsContext, size: CGSize, t: Double) {
@@ -165,6 +167,18 @@ struct LiquidGlassView: View {
             drawBubbles(&bubbleCtx, layerIndex: i, isFizzy: layer.isFizzy,
                         top: bands[i].top, bottom: i == 0 ? h : bands[i].bottom, width: w, t: t)
 
+            // Glossy sheen just under each band's surface.
+            let glossTop = bands[i].top - amp - 20
+            bubbleCtx.fill(Path(CGRect(x: 0, y: glossTop, width: w, height: 56 + amp)),
+                           with: .linearGradient(
+                               Gradient(stops: [
+                                   .init(color: .white.opacity(0.0), location: 0),
+                                   .init(color: .white.opacity(0.30), location: 0.4),
+                                   .init(color: .white.opacity(0.0), location: 1),
+                               ]),
+                               startPoint: CGPoint(x: 0, y: glossTop),
+                               endPoint: CGPoint(x: 0, y: glossTop + 56 + amp)))
+
             // Soft seam between layers.
             var seam = Path()
             for (j, x) in stride(from: -12.0, through: w + 12, by: 6).enumerated() {
@@ -180,6 +194,31 @@ struct LiquidGlassView: View {
             } else {
                 ctx.stroke(seam, with: .color(.white.opacity(0.35)), lineWidth: 1)
             }
+        }
+
+        // Light rays slanting down through the whole liquid, drifting slowly.
+        let liquid = band(top: bands[topIndex].top, bottom: nil, topWave: 1, bottomWave: 0)
+        var rays = ctx
+        rays.clip(to: liquid)
+        rays.blendMode = .plusLighter
+        let surfaceY = bands[topIndex].top - amp
+        let depth = h - surfaceY + 40
+        for r in 0..<7 {
+            let seed = rand(7, r, 1)
+            let width = 26 + rand(7, r, 2) * 60
+            let x = w * (Double(r) + 0.3 + seed * 0.4) / 7 + sin(t * 0.22 + Double(r) * 1.9) * 26
+            let lean = 0.18 + rand(7, r, 3) * 0.12
+            let strength = 0.07 + 0.06 * (0.5 + 0.5 * sin(t * 0.7 + Double(r) * 2.3))
+            var ray = Path()
+            ray.move(to: CGPoint(x: x - width / 2, y: surfaceY))
+            ray.addLine(to: CGPoint(x: x + width / 2, y: surfaceY))
+            ray.addLine(to: CGPoint(x: x + width * 1.4 + lean * depth, y: surfaceY + depth))
+            ray.addLine(to: CGPoint(x: x - width * 0.4 + lean * depth, y: surfaceY + depth))
+            ray.closeSubpath()
+            rays.fill(ray, with: .linearGradient(
+                Gradient(colors: [.white.opacity(strength), .white.opacity(0)]),
+                startPoint: CGPoint(x: 0, y: surfaceY),
+                endPoint: CGPoint(x: 0, y: surfaceY + depth * 0.75)))
         }
     }
 

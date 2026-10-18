@@ -92,7 +92,8 @@ enum Seeder {
         let start = clock.dayStart(containing: now)
 
         let today: [(String, Double, Double)] = [
-            ("water", 500, -6), ("coffee", 250, -5), ("juice", 200, -3), ("beer", 330, -1),
+            ("coffee", 200, -9), ("water", 250, -7.5), ("tea", 300, -5.5), ("juice", 250, -4),
+            ("water", 250, -3), ("coffee", 200, -1.5), ("water", 250, -0.3),
         ]
         for (key, ml, hours) in today {
             guard let t = type(key) else { continue }

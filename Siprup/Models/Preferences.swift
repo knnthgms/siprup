@@ -58,6 +58,13 @@ enum Volume {
         }
     }
 
+    /// Number and unit separately, for the large total ("2.05" + "L").
+    static func formatParts(_ ml: Double, _ unit: UnitSystem) -> (number: String, unit: String) {
+        let full = format(ml, unit)
+        guard let space = full.firstIndex(of: " ") else { return (full, "") }
+        return (String(full[..<space]), String(full[full.index(after: space)...]))
+    }
+
     /// Plain number in the display unit for editing (no grouping separators).
     static func editableString(_ ml: Double, _ unit: UnitSystem) -> String {
         let v = toDisplay(ml, unit)

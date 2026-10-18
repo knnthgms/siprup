@@ -17,6 +17,7 @@ struct DrinkTypeEditorView: View {
     @State private var caffeine = ""
     @State private var sugar = ""
     @State private var kcal = ""
+    @State private var quickSize = ""
     @State private var loaded = false
     @State private var confirmDelete = false
 
@@ -38,6 +39,11 @@ struct DrinkTypeEditorView: View {
                 if type?.isBuiltIn == true {
                     Toggle("Show in drink picker", isOn: $isShown)
                 }
+            }
+            Section {
+                nutritionField("Quick-add size", unit: unit.shortLabel, text: $quickSize)
+            } footer: {
+                Text("Logged with one tap from the drink dock on the home screen.")
             }
             Section {
                 nutritionField("Caffeine", unit: "mg", text: $caffeine)
@@ -89,8 +95,13 @@ struct DrinkTypeEditorView: View {
     }
 
     private func load() {
-        guard !loaded, let type else { loaded = true; return }
+        guard !loaded, let type else {
+            if !loaded { quickSize = Volume.editableString(250, unit) }
+            loaded = true
+            return
+        }
         loaded = true
+        quickSize = Volume.editableString(type.quickServing, unit)
         name = type.name
         color = Color(hex: type.colorHex)
         isFizzy = type.isFizzy
@@ -119,6 +130,9 @@ struct DrinkTypeEditorView: View {
         target.caffeineMgPer100ml = per100(caffeine)
         target.sugarGPer100ml = per100(sugar)
         target.kcalPer100ml = per100(kcal)
+        if let size = Volume.parse(quickSize).map({ Volume.toML($0, unit) }), (1...5000).contains(size) {
+            target.quickServingML = size
+        }
         try? context.save()
         if type == nil { onCreate?(target) }
         dismiss()

@@ -46,6 +46,18 @@ final class DrinkType {
         self.kcalPer100ml = kcalPer100ml
     }
 
+    /// Size logged by a one-tap quick add. nil falls back to a typical serving for the type.
+    var quickServingML: Double?
+
+    var quickServing: Double {
+        if let quickServingML { return quickServingML }
+        switch key {
+        case "coffee", "juice", "milk": return 200
+        case "sparkling", "cola", "beer": return 330
+        default: return 250
+        }
+    }
+
     var hasFoam: Bool { key == "beer" }
     var hasNutritionData: Bool {
         caffeineMgPer100ml != nil || sugarGPer100ml != nil || kcalPer100ml != nil

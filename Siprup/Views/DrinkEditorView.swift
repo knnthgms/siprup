@@ -149,6 +149,12 @@ struct DrinkEditorView: View {
                 }
             }
             .onAppear(perform: load)
+            .onChange(of: selectedTypeID) { old, _ in
+                // When adding, picking a drink pre-fills its usual size.
+                if case .add = mode, old != nil, let type = selectedType {
+                    amountText = Volume.editableString(type.quickServing, unit)
+                }
+            }
         }
     }
 
@@ -158,7 +164,7 @@ struct DrinkEditorView: View {
         switch mode {
         case .add(let date):
             selectedTypeID = types.first?.id
-            amountText = Volume.editableString(Volume.presets(unit)[2].ml, unit)
+            amountText = Volume.editableString(types.first?.quickServing ?? 250, unit)
             time = min(date, Date())
         case .edit(let entry):
             selectedTypeID = entry.type?.id
