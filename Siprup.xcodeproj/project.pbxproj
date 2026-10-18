@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0ED84FB101E2ACEC0CC9FD8D /* ColorHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8696305A6DFA2CFA1A081BE1 /* ColorHex.swift */; };
+		1B5A05B2E2B25AE56A5B9A13 /* SiprupApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93FE011181F2E04BFCBA98B /* SiprupApp.swift */; };
+		366D1B2C073198F339ADBA99 /* DrinkEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB63BE2F78527C5E1B68294 /* DrinkEditorView.swift */; };
+		556169D19456D571F565D155 /* Reminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D5D7F9912D64C74A4AD400 /* Reminders.swift */; };
+		5F2817FDB872FCA91C6FA0EB /* TiltSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3762227D8B6254794FF34F5 /* TiltSensor.swift */; };
+		7BE9224E3FCB451064E6980E /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAA60D4E805D3BBF8A6DA33 /* Preferences.swift */; };
+		9F6C62B19A348A99400B8EC0 /* DayLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15698D3D660B800A958B1AEE /* DayLogView.swift */; };
+		A265D075AE3E2D02305F2BD6 /* SiprupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323AAAD9D3A0082A9A6C8E91 /* SiprupTests.swift */; };
+		A4BC4B960864A71557BB4B29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57851CCBA26D1DBC570820B2 /* Assets.xcassets */; };
+		B9B578C952E329E6058D560B /* DrinkTypeEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4C3A84963CA471DEBAB9D7 /* DrinkTypeEditorView.swift */; };
+		CCFBE5B73A250C8E7642D0AD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5B2335F8848EEC055B12B5 /* HomeView.swift */; };
+		E23BF8E05CA1404849A56B9F /* LiquidGlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA16EDE1B6B2236BF6E0ADF /* LiquidGlassView.swift */; };
+		E4278136E39B874D66FF35A0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B87E69967FA03B8D1FCBA70 /* SettingsView.swift */; };
+		EFD73A5893963C8905BAFFD0 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2745B9CBF43B8D68B2046274 /* Models.swift */; };
+		F5BDE2E6FED649D54EDF6C00 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F97BD8F65C198EEED707E2 /* HistoryView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5E12E4A1BA4C679669E769FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 756818E82C603D5429574C14 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA857B284C32A48550BC6803;
+			remoteInfo = Siprup;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		15698D3D660B800A958B1AEE /* DayLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayLogView.swift; sourceTree = "<group>"; };
+		1B487F3F5C0B1EFC534661EF /* Siprup.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Siprup.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CB63BE2F78527C5E1B68294 /* DrinkEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkEditorView.swift; sourceTree = "<group>"; };
+		2745B9CBF43B8D68B2046274 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		2AA16EDE1B6B2236BF6E0ADF /* LiquidGlassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiquidGlassView.swift; sourceTree = "<group>"; };
+		323AAAD9D3A0082A9A6C8E91 /* SiprupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiprupTests.swift; sourceTree = "<group>"; };
+		3AAA60D4E805D3BBF8A6DA33 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		45F97BD8F65C198EEED707E2 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		4C5B2335F8848EEC055B12B5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		57851CCBA26D1DBC570820B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7191980F3B88F0AB24F4224C /* SiprupTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = SiprupTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B87E69967FA03B8D1FCBA70 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		8696305A6DFA2CFA1A081BE1 /* ColorHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHex.swift; sourceTree = "<group>"; };
+		A0D5D7F9912D64C74A4AD400 /* Reminders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminders.swift; sourceTree = "<group>"; };
+		C93FE011181F2E04BFCBA98B /* SiprupApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiprupApp.swift; sourceTree = "<group>"; };
+		D3762227D8B6254794FF34F5 /* TiltSensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiltSensor.swift; sourceTree = "<group>"; };
+		EC4C3A84963CA471DEBAB9D7 /* DrinkTypeEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkTypeEditorView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		115F05E2BD96432A89E181FE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8696305A6DFA2CFA1A081BE1 /* ColorHex.swift */,
+				A0D5D7F9912D64C74A4AD400 /* Reminders.swift */,
+				D3762227D8B6254794FF34F5 /* TiltSensor.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1849F11F699A6E59B7E3051E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1B487F3F5C0B1EFC534661EF /* Siprup.app */,
+				7191980F3B88F0AB24F4224C /* SiprupTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9D753A9A66A27FE75B115E73 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C93FE011181F2E04BFCBA98B /* SiprupApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A9D725DECC4B41D05541A297 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2745B9CBF43B8D68B2046274 /* Models.swift */,
+				3AAA60D4E805D3BBF8A6DA33 /* Preferences.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B28E802AFF5E8E5F91ED36FE /* Siprup */ = {
+			isa = PBXGroup;
+			children = (
+				57851CCBA26D1DBC570820B2 /* Assets.xcassets */,
+				9D753A9A66A27FE75B115E73 /* App */,
+				A9D725DECC4B41D05541A297 /* Models */,
+				115F05E2BD96432A89E181FE /* Services */,
+				DB8791BC18900C4A20E331BD /* Views */,
+			);
+			path = Siprup;
+			sourceTree = "<group>";
+		};
+		B345B1AA9C069F8D05114A5B /* SiprupTests */ = {
+			isa = PBXGroup;
+			children = (
+				323AAAD9D3A0082A9A6C8E91 /* SiprupTests.swift */,
+			);
+			path = SiprupTests;
+			sourceTree = "<group>";
+		};
+		CDA234CAACEBF1D19B22C6F9 = {
+			isa = PBXGroup;
+			children = (
+				B28E802AFF5E8E5F91ED36FE /* Siprup */,
+				B345B1AA9C069F8D05114A5B /* SiprupTests */,
+				1849F11F699A6E59B7E3051E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DB8791BC18900C4A20E331BD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				15698D3D660B800A958B1AEE /* DayLogView.swift */,
+				1CB63BE2F78527C5E1B68294 /* DrinkEditorView.swift */,
+				EC4C3A84963CA471DEBAB9D7 /* DrinkTypeEditorView.swift */,
+				45F97BD8F65C198EEED707E2 /* HistoryView.swift */,
+				4C5B2335F8848EEC055B12B5 /* HomeView.swift */,
+				2AA16EDE1B6B2236BF6E0ADF /* LiquidGlassView.swift */,
+				7B87E69967FA03B8D1FCBA70 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		91DB0DC67A56646009D71AB8 /* SiprupTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48FD56E1A651040205F46A67 /* Build configuration list for PBXNativeTarget "SiprupTests" */;
+			buildPhases = (
+				5A004B61E80DFB46EEACAE18 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				854BA7F89C6CD4D1D7310BB0 /* PBXTargetDependency */,
+			);
+			name = SiprupTests;
+			packageProductDependencies = (
+			);
+			productName = SiprupTests;
+			productReference = 7191980F3B88F0AB24F4224C /* SiprupTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EA857B284C32A48550BC6803 /* Siprup */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9EC009D73FAAA0E16DCBDDE2 /* Build configuration list for PBXNativeTarget "Siprup" */;
+			buildPhases = (
+				85BDBD8D411375C364B4D6C4 /* Sources */,
+				98184DD13635D23D3D97B49E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Siprup;
+			packageProductDependencies = (
+			);
+			productName = Siprup;
+			productReference = 1B487F3F5C0B1EFC534661EF /* Siprup.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		756818E82C603D5429574C14 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					91DB0DC67A56646009D71AB8 = {
+						DevelopmentTeam = "";
+					};
+					EA857B284C32A48550BC6803 = {
+						DevelopmentTeam = "";
+					};
+				};
+			};
+			buildConfigurationList = 6E09CDF4E8822FD716E886D5 /* Build configuration list for PBXProject "Siprup" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CDA234CAACEBF1D19B22C6F9;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 1849F11F699A6E59B7E3051E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA857B284C32A48550BC6803 /* Siprup */,
+				91DB0DC67A56646009D71AB8 /* SiprupTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		98184DD13635D23D3D97B49E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4BC4B960864A71557BB4B29 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5A004B61E80DFB46EEACAE18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A265D075AE3E2D02305F2BD6 /* SiprupTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85BDBD8D411375C364B4D6C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ED84FB101E2ACEC0CC9FD8D /* ColorHex.swift in Sources */,
+				9F6C62B19A348A99400B8EC0 /* DayLogView.swift in Sources */,
+				366D1B2C073198F339ADBA99 /* DrinkEditorView.swift in Sources */,
+				B9B578C952E329E6058D560B /* DrinkTypeEditorView.swift in Sources */,
+				F5BDE2E6FED649D54EDF6C00 /* HistoryView.swift in Sources */,
+				CCFBE5B73A250C8E7642D0AD /* HomeView.swift in Sources */,
+				E23BF8E05CA1404849A56B9F /* LiquidGlassView.swift in Sources */,
+				EFD73A5893963C8905BAFFD0 /* Models.swift in Sources */,
+				7BE9224E3FCB451064E6980E /* Preferences.swift in Sources */,
+				556169D19456D571F565D155 /* Reminders.swift in Sources */,
+				E4278136E39B874D66FF35A0 /* SettingsView.swift in Sources */,
+				1B5A05B2E2B25AE56A5B9A13 /* SiprupApp.swift in Sources */,
+				5F2817FDB872FCA91C6FA0EB /* TiltSensor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		854BA7F89C6CD4D1D7310BB0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA857B284C32A48550BC6803 /* Siprup */;
+			targetProxy = 5E12E4A1BA4C679669E769FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		64B22DAD3F99552519EB28A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		6CD1812B337173A6D1894E55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kengomes.SiprupTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Siprup.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Siprup";
+			};
+			name = Debug;
+		};
+		9DBFD6463C0F637E0CC5F90A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		9DFCABCC84E145A2D47DE3C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Siprup;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kengomes.siprup;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		CC3344A86A46D922F9FB12ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kengomes.SiprupTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Siprup.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Siprup";
+			};
+			name = Release;
+		};
+		DEC203EEB0402B651427A787 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Siprup;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kengomes.siprup;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		48FD56E1A651040205F46A67 /* Build configuration list for PBXNativeTarget "SiprupTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CD1812B337173A6D1894E55 /* Debug */,
+				CC3344A86A46D922F9FB12ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6E09CDF4E8822FD716E886D5 /* Build configuration list for PBXProject "Siprup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64B22DAD3F99552519EB28A0 /* Debug */,
+				9DBFD6463C0F637E0CC5F90A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9EC009D73FAAA0E16DCBDDE2 /* Build configuration list for PBXNativeTarget "Siprup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEC203EEB0402B651427A787 /* Debug */,
+				9DFCABCC84E145A2D47DE3C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 756818E82C603D5429574C14 /* Project object */;
+}
