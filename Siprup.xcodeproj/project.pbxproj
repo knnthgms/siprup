@@ -17,9 +17,11 @@
 		A265D075AE3E2D02305F2BD6 /* SiprupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323AAAD9D3A0082A9A6C8E91 /* SiprupTests.swift */; };
 		A4BC4B960864A71557BB4B29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57851CCBA26D1DBC570820B2 /* Assets.xcassets */; };
 		B9B578C952E329E6058D560B /* DrinkTypeEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4C3A84963CA471DEBAB9D7 /* DrinkTypeEditorView.swift */; };
+		BA10A4DA0D8C181F7272F60F /* LiquidShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = EB7C55B6CE7008CAB76CC5C8 /* LiquidShaders.metal */; };
 		CCFBE5B73A250C8E7642D0AD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5B2335F8848EEC055B12B5 /* HomeView.swift */; };
 		E23BF8E05CA1404849A56B9F /* LiquidGlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA16EDE1B6B2236BF6E0ADF /* LiquidGlassView.swift */; };
 		E4278136E39B874D66FF35A0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B87E69967FA03B8D1FCBA70 /* SettingsView.swift */; };
+		E876FF8DD16BCA808E8DD124 /* DockPins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582CFCC9BE34ED8ADCB8D780 /* DockPins.swift */; };
 		EFD73A5893963C8905BAFFD0 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2745B9CBF43B8D68B2046274 /* Models.swift */; };
 		F5BDE2E6FED649D54EDF6C00 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F97BD8F65C198EEED707E2 /* HistoryView.swift */; };
 /* End PBXBuildFile section */
@@ -45,12 +47,14 @@
 		45F97BD8F65C198EEED707E2 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		4C5B2335F8848EEC055B12B5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		57851CCBA26D1DBC570820B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		582CFCC9BE34ED8ADCB8D780 /* DockPins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockPins.swift; sourceTree = "<group>"; };
 		7191980F3B88F0AB24F4224C /* SiprupTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = SiprupTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B87E69967FA03B8D1FCBA70 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		8696305A6DFA2CFA1A081BE1 /* ColorHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHex.swift; sourceTree = "<group>"; };
 		A0D5D7F9912D64C74A4AD400 /* Reminders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminders.swift; sourceTree = "<group>"; };
 		C93FE011181F2E04BFCBA98B /* SiprupApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiprupApp.swift; sourceTree = "<group>"; };
 		D3762227D8B6254794FF34F5 /* TiltSensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiltSensor.swift; sourceTree = "<group>"; };
+		EB7C55B6CE7008CAB76CC5C8 /* LiquidShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = LiquidShaders.metal; sourceTree = "<group>"; };
 		EC4C3A84963CA471DEBAB9D7 /* DrinkTypeEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkTypeEditorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +89,7 @@
 		A9D725DECC4B41D05541A297 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				582CFCC9BE34ED8ADCB8D780 /* DockPins.swift */,
 				2745B9CBF43B8D68B2046274 /* Models.swift */,
 				3AAA60D4E805D3BBF8A6DA33 /* Preferences.swift */,
 			);
@@ -129,6 +134,7 @@
 				45F97BD8F65C198EEED707E2 /* HistoryView.swift */,
 				4C5B2335F8848EEC055B12B5 /* HomeView.swift */,
 				2AA16EDE1B6B2236BF6E0ADF /* LiquidGlassView.swift */,
+				EB7C55B6CE7008CAB76CC5C8 /* LiquidShaders.metal */,
 				7B87E69967FA03B8D1FCBA70 /* SettingsView.swift */,
 			);
 			path = Views;
@@ -236,11 +242,13 @@
 			files = (
 				0ED84FB101E2ACEC0CC9FD8D /* ColorHex.swift in Sources */,
 				9F6C62B19A348A99400B8EC0 /* DayLogView.swift in Sources */,
+				E876FF8DD16BCA808E8DD124 /* DockPins.swift in Sources */,
 				366D1B2C073198F339ADBA99 /* DrinkEditorView.swift in Sources */,
 				B9B578C952E329E6058D560B /* DrinkTypeEditorView.swift in Sources */,
 				F5BDE2E6FED649D54EDF6C00 /* HistoryView.swift in Sources */,
 				CCFBE5B73A250C8E7642D0AD /* HomeView.swift in Sources */,
 				E23BF8E05CA1404849A56B9F /* LiquidGlassView.swift in Sources */,
+				BA10A4DA0D8C181F7272F60F /* LiquidShaders.metal in Sources */,
 				EFD73A5893963C8905BAFFD0 /* Models.swift in Sources */,
 				7BE9224E3FCB451064E6980E /* Preferences.swift in Sources */,
 				556169D19456D571F565D155 /* Reminders.swift in Sources */,

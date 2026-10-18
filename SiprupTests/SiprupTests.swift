@@ -101,3 +101,21 @@ final class ContrastTests: XCTestCase {
         XCTAssertFalse(Contrast.prefersDarkText(onHex: "16212B"))  // dark empty glass
     }
 }
+
+final class DockPinsTests: XCTestCase {
+    func testDefaultsThenSwap() {
+        let types = BuiltInDrinks.make()
+        let pins = DockPins.resolve("", types: types)
+        XCTAssertEqual(pins.map(\.key), ["water", "coffee", "tea", "juice"])
+
+        // Pinning beer into slot 0 replaces water.
+        let beer = types.first { $0.key == "beer" }!
+        let raw = DockPins.setting(beer, slot: 0, in: pins)
+        XCTAssertEqual(DockPins.resolve(raw, types: types).map(\.key), ["beer", "coffee", "tea", "juice"])
+
+        // Pinning an already-pinned drink swaps the two slots.
+        let tea = types.first { $0.key == "tea" }!
+        let swapped = DockPins.setting(tea, slot: 0, in: DockPins.resolve(raw, types: types))
+        XCTAssertEqual(DockPins.resolve(swapped, types: types).map(\.key), ["tea", "coffee", "beer", "juice"])
+    }
+}

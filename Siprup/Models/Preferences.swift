@@ -12,6 +12,7 @@ enum Prefs {
     static let quietStart = "quietStartMinutes"
     static let quietEnd = "quietEndMinutes"
     static let pausedUntil = "remindersPausedUntil"
+    static let dockTypeIDs = "dockTypeIDs"
 
     static let defaultGoalML = 2000.0
     static let defaultResetHour = 4

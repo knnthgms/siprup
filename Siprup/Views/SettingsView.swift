@@ -29,10 +29,10 @@ struct SettingsView: View {
                 goalSection
                 remindersSection
                 displaySection
+                DockSettingsSection()
                 Section {
                     NavigationLink("Drink types") { DrinkTypesListView() }
                 }
-                aboutSection
             }
             .navigationTitle("Settings")
             .toolbar { ToolbarItem(placement: .confirmationAction) { Button("Done") { dismiss() } } }
@@ -70,7 +70,7 @@ struct SettingsView: View {
         } header: {
             Text("Goal")
         } footer: {
-            Text("Drinks logged before this time count toward the previous day. Fluid needs vary with body, activity, climate and health — if a clinician has given you a target or limit, use theirs.")
+            Text("Drinks logged before this time count toward the previous day.")
         }
     }
 
@@ -131,14 +131,6 @@ struct SettingsView: View {
         }
     }
 
-    private var aboutSection: some View {
-        Section("About") {
-            Text("Siprup is a simple drink log, not a medical device. The glass illustrates what you've logged — it doesn't measure hydration, and the layers don't show how drinks mix in your body. All beverages, including coffee, count toward your logged fluid. History is stored only on this device.")
-                .font(.footnote)
-                .foregroundStyle(.secondary)
-        }
-    }
-
     // MARK: Helpers
 
     private func setReminders(_ on: Bool) {
@@ -174,5 +166,34 @@ struct SettingsView: View {
                 minutes.wrappedValue = (c.hour ?? 0) * 60 + (c.minute ?? 0)
             }
         )
+    }
+}
+
+/// Choose which four drinks sit in the home-screen dock.
+private struct DockSettingsSection: View {
+    @Query(filter: #Predicate<DrinkType> { $0.isHidden == false }, sort: \DrinkType.sortOrder)
+    private var types: [DrinkType]
+    @AppStorage(Prefs.dockTypeIDs) private var dockRaw = ""
+
+    var body: some View {
+        let pinned = DockPins.resolve(dockRaw, types: types)
+        Section {
+            ForEach(Array(pinned.enumerated()), id: \.offset) { slot, current in
+                Picker("Slot \(slot + 1)", selection: Binding(
+                    get: { current.id },
+                    set: { id in
+                        if let t = types.first(where: { $0.id == id }) {
+                            dockRaw = DockPins.setting(t, slot: slot, in: pinned)
+                        }
+                    }
+                )) {
+                    ForEach(types) { Text($0.name).tag($0.id) }
+                }
+            }
+        } header: {
+            Text("Dock")
+        } footer: {
+            Text("One tap on the home screen logs these at their quick-add size. You can also press and hold a drink in the dock to swap it.")
+        }
     }
 }
