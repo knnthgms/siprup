@@ -1,8 +1,20 @@
+<div align="center">
+
 # Siprup 💧
 
-A playful hydration log for iOS. The whole phone screen is the side of a glass, and every drink you log pours in as its own band, with caustic light, rising bubbles and a foamy head on beer.
+**A playful hydration log for iOS where the whole screen is the side of a glass.**
 
-![Home screen](docs/home.png)
+Every drink you log pours in as its own coloured band, with caustic light, rising bubbles, a meniscus that tilts with your phone, and a foamy head on beer.
+
+![iOS 17+](https://img.shields.io/badge/iOS-17%2B-111?logo=apple&logoColor=white)
+![SwiftUI](https://img.shields.io/badge/SwiftUI-Canvas%20%2B%20Metal-F05138?logo=swift&logoColor=white)
+![SwiftData](https://img.shields.io/badge/storage-SwiftData-0A84FF)
+![No dependencies](https://img.shields.io/badge/dependencies-none-2EA44F)
+![License: MIT](https://img.shields.io/badge/license-MIT-lightgrey)
+
+<img src="docs/home.png" width="300" alt="Siprup home screen: layered drinks filling the screen like a glass, with a quick-add dock">
+
+</div>
 
 ## Stack
 Only Apple's built-in frameworks, so there are no third-party dependencies:
@@ -32,3 +44,7 @@ These cover the day-reset maths, unit conversion, nutrition sums, reminder sched
 
 ## Dock
 The home screen dock holds four pinned drinks, each logged in one tap at its quick-add size (with Undo), plus **More** for any drink or size. To change the pins, press and hold a dock drink or go to Settings → Dock. Set the quick-add size in Settings → Drink types.
+
+## License
+
+[MIT](LICENSE) © Kenneth Gomes
